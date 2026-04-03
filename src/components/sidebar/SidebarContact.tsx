@@ -11,6 +11,8 @@ export type SidebarContactProps = {
 
 export function SidebarContact(props: SidebarContactProps) {
   const { person, resumePdf } = props;
+  const resumeFilename =
+    resumePdf.url.split("/").pop()?.split("?")[0] ?? "resume.pdf";
   return (
     <div className="sidebar-contact" aria-label="Contact">
       <ul className="sidebar-social">
@@ -51,7 +53,7 @@ export function SidebarContact(props: SidebarContactProps) {
         <li>
           <a
             href={resumePdf.url}
-            download={resumePdf.downloadAs}
+            download={resumeFilename}
             className="sidebar-social-link"
             aria-label="Download resume PDF"
             title="Resume PDF"

@@ -42,5 +42,4 @@ export interface EducationEntry {
 
 export interface ResumePdf {
   url: string;
-  downloadAs: string;
 }

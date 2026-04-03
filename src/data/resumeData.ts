@@ -23,10 +23,9 @@ export const person = {
   ],
 } satisfies Person;
 
-/** Original resume PDF — place file at this path under `public/` */
+/** CV PDF — place file at this path under `public/` */
 export const RESUME_PDF = {
-  url: "/ian-henry-resume.pdf",
-  downloadAs: "Ian-Henry-Resume.pdf",
+  url: "/ian-henry-cv.pdf",
 } satisfies ResumePdf;
 
 /**
