@@ -7,7 +7,9 @@ import {
   education,
   experience,
   person,
+  projects,
   RESUME_PDF,
+  volunteering,
 } from "./data/resumeData";
 
 export default function App() {
@@ -20,10 +22,8 @@ export default function App() {
         <Sidebar person={person} resumePdf={RESUME_PDF} />
         <div className="main-column">
           <main id="main" tabIndex={-1}>
-            <Section id="profile" title="Profile">
-              <p className="profile-text">{person.summary}</p>
-            </Section>
             <Section id="highlights" title="Highlights">
+              <p className="highlights-intro">{person.summary}</p>
               <ul className="highlights-list">
                 {person.highlights.map((highlight) => (
                   <li key={highlight}>{highlight}</li>
@@ -32,6 +32,15 @@ export default function App() {
             </Section>
             <Section id="experience" title="Experience">
               <ExperienceBlock experience={experience} />
+            </Section>
+            <Section id="volunteering" title="Volunteering">
+              <ExperienceBlock experience={volunteering} />
+            </Section>
+            <Section id="projects" title="Projects">
+              <ExperienceBlock
+                experience={projects}
+                leftColumnStartDateOnly
+              />
             </Section>
             <Section id="education" title="Education">
               <EducationBlock education={education} />

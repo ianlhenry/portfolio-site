@@ -18,7 +18,7 @@
   --font-body: "Inter", "Source Sans 3", system-ui, sans-serif;
   --font-display: "Inter", "Source Sans 3", system-ui, sans-serif;
   --sidebar-width: min(300px, 34vw);
-  --max-content: 50rem;
+  --max-content: 55rem;
   --space-xs: 0.35rem;
   --space-sm: 0.65rem;
   --space-md: 1rem;
@@ -322,11 +322,11 @@ main:focus {
   color: var(--text-heading);
 }
 
-.profile-text {
+.highlights-intro {
   font-size: var(--fs-bullet);
   font-weight: 400;
   color: var(--text);
-  margin: 0;
+  margin: 0 0 var(--space-md);
   line-height: var(--lh-prose);
 }
 
@@ -385,6 +385,25 @@ main:focus {
   .role.role-team-sections:hover {
     background: transparent;
     box-shadow: none;
+  }
+
+  /* Single-role entries (e.g. volunteering): highlight the full row */
+  .role.role-team-sections.role-unified-hover:hover {
+    background: var(--surface-hover);
+    box-shadow: inset 0 1px 0 0 var(--surface-hover-edge);
+  }
+
+  .role.role-unified-hover .team-section-block:hover,
+  .role.role-unified-hover .team-section-block:focus-within {
+    background: transparent;
+    box-shadow: none;
+  }
+
+  .role.role-unified-hover .team-section-block {
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0;
+    padding-right: 0;
   }
 }
 

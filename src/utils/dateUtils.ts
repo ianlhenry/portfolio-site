@@ -23,6 +23,13 @@ function formatMonthYear(datePart: YearMonth | null | undefined): string {
   return `${monthAbbrev} ${datePart.year}`;
 }
 
+/** `{ month: 1–12, year }` → e.g. "May 2026" (start date only, no range). */
+export function formatJobStartDate(
+  startDate: YearMonth | null | undefined,
+): string {
+  return formatMonthYear(startDate);
+}
+
 /** E.g. "Aug 2018 — Apr 2025"; `endDate` null → "Aug 2018 — Present". */
 export function formatJobDateRange(
   startDate: YearMonth | null | undefined,

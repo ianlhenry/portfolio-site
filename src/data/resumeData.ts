@@ -185,6 +185,53 @@ export const experience = [
   },
 ] satisfies Employer[];
 
+export const volunteering = [
+  {
+    company: "Mountaineers",
+    companyUrl: "https://www.mountaineers.org/blog/technology-changelog",
+    startDate: { month: 11, year: 2025 },
+    endDate: null,
+    roles: [
+      {
+        jobTitle: "Software Engineer",
+        teamName: "",
+        startDate: { month: 11, year: 2025 },
+        endDate: null,
+        languages: ["Javascript", "React", "Python", "Plone/Zope", "Cursor AI IDE", "Claude Code"],
+        jobResponsibilities: [
+          "Implemented various website features requested by trip leaders and members using Javascript & Python in Plone & Zope tech stack",
+          "Profiled and improved page load time performance of several high-use pages by 3-5x",
+        ],
+      },
+    ],
+  },
+] satisfies Employer[];
+
+export const projects = [
+  {
+    company: "BetaCast",
+    companyUrl: "https://betacast.ianhenry.ca/",
+    startDate: { month: 5, year: 2026 },
+    endDate: null,
+    roles: [
+      {
+        jobTitle: "",
+        teamName: "",
+        startDate: { month: 5, year: 2026 },
+        endDate: null,
+        languages: [
+          "Javascript",
+          "React",
+          "Cursor AI IDE",
+        ],
+        jobResponsibilities: [
+          "Built a web application using agentic flows with Cursor AI IDE to aggregate mountaineering trip-planning resources for a specific location into a single interface, including weather forecasting, snow depth, air quality, mapping tools, and others.",
+        ],
+      },
+    ],
+  },
+] satisfies Employer[];
+
 export const education = [
   {
     degree: "Bachelor of Applied Science in Computer Engineering",

@@ -8,19 +8,25 @@ export type TeamSectionBlockProps = {
 export function TeamSectionBlock(props: TeamSectionBlockProps) {
   const { role } = props;
   const dateLabel = formatJobDateRange(role.startDate, role.endDate);
+  const showHeading = Boolean(role.teamName || role.jobTitle);
   const ariaLabel = [role.teamName, role.jobTitle, dateLabel]
     .filter(Boolean)
     .join(" · ");
   return (
     <section className="team-section-block" aria-label={ariaLabel}>
+      {showHeading ? (
       <h4 className="team-section-heading">
-        <span className="team-section-name">{role.teamName}</span>
+        {role.teamName ? (
+          <span className="team-section-name">{role.teamName}</span>
+        ) : null}
         {role.jobTitle ? (
           <>
-            <span className="team-section-sep" aria-hidden>
-              {" "}
-              ·{" "}
-            </span>
+            {role.teamName ? (
+              <span className="team-section-sep" aria-hidden>
+                {" "}
+                ·{" "}
+              </span>
+            ) : null}
             <span className="team-section-job">{role.jobTitle}</span>
           </>
         ) : null}
@@ -31,6 +37,7 @@ export function TeamSectionBlock(props: TeamSectionBlockProps) {
           </span>
         ) : null}
       </h4>
+      ) : null}
       {role.jobResponsibilities?.length ? (
         <ul className="team-section-list">
           {role.jobResponsibilities.map((responsibility) => (
