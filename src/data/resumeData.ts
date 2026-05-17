@@ -199,8 +199,7 @@ export const volunteering = [
         endDate: null,
         languages: ["Javascript", "React", "Python", "Plone/Zope", "Cursor AI IDE", "Claude Code"],
         jobResponsibilities: [
-          "Implemented various website features requested by trip leaders and members using Javascript & Python in Plone & Zope tech stack",
-          "Profiled and improved page load time performance of several high-use pages by 3-5x",
+          "Implemented various website features requested by trip leaders and members using Javascript & Python in a Plone & Zope based tech stack",
         ],
       },
     ],
