@@ -224,7 +224,7 @@ export const projects = [
           "Cursor AI IDE",
         ],
         jobResponsibilities: [
-          "Built a web application using agentic flows with Cursor AI IDE to aggregate mountaineering trip-planning resources for a specific location into a single interface, including weather forecasting, snow depth, air quality, mapping tools, and others.",
+          "Built a web application using agentic flows with Cursor AI IDE to aggregate mountaineering trip-planning resources for a specific location into a single interface, including weather forecasting, snow depth, air quality, mapping tools, and and more.",
         ],
       },
     ],
