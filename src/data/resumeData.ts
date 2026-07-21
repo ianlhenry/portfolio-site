@@ -199,7 +199,7 @@ export const volunteering = [
         endDate: null,
         languages: ["Javascript", "React", "Python", "Plone/Zope", "Cursor AI IDE", "Claude Code"],
         jobResponsibilities: [
-          "Implemented various website features requested by trip leaders and members using Javascript & Python in a Plone & Zope based tech stack",
+          "Implemented various website features and performance improvements requested by trip leaders and members using Javascript & Python in a Plone & Zope based tech stack",
         ],
       },
     ],
@@ -207,6 +207,28 @@ export const volunteering = [
 ] satisfies Employer[];
 
 export const projects = [
+  {
+    company: "Trailbound",
+    companyUrl: "https://trailbound.ianhenry.ca/",
+    startDate: { month: 7, year: 2026 },
+    endDate: null,
+    roles: [
+      {
+        jobTitle: "",
+        teamName: "",
+        startDate: { month: 7, year: 2026 },
+        endDate: null,
+        languages: [
+          "Javascript",
+          "Next.js",
+          "Cursor AI IDE",
+        ],
+        jobResponsibilities: [
+          "Built a web application using agentic flows with Cursor AI IDE to find a backpacking route based on weather forecasts, trail conditions, and other factors",
+        ],
+      },
+    ],
+  },
   {
     company: "BetaCast",
     companyUrl: "https://betacast.ianhenry.ca/",
@@ -224,7 +246,7 @@ export const projects = [
           "Cursor AI IDE",
         ],
         jobResponsibilities: [
-          "Built a web application using agentic flows with Cursor AI IDE to aggregate mountaineering trip-planning resources for a specific location into a single interface, including weather forecasting, snow depth, air quality, mapping tools, and and more.",
+          "Web application built using agentic flows with Cursor AI IDE to aggregate mountaineering trip-planning resources for a specific location into a single interface, including weather forecasting, snow depth, air quality, mapping tools, and more",
         ],
       },
     ],
