@@ -59,13 +59,13 @@ export const experience = [
             text: "Early member of the team building a new Instagram app for Oculus VR, owning ambiguous and technically complex features end to end:", 
             subBullets: [
               "Content Reporting. Evaluated architecture options by studying how reporting worked on Instagram for web, iOS, and Android, then chose a novel approach that reused code across platforms, reducing development and maintenance costs while meeting all legal requirements.",
-              "Teen Accounts. Built quiet hours and daily time limits end to end, porting existing backend APIs to GraphQL for reuse and building the front end from scratch. Covered the unusually complex business logic thoroughly with tests and team bug bashes.",
+              "Teen Accounts. Built quiet hours and daily time limits, porting existing backend APIs to GraphQL for reuse and building the front end from scratch. Covered the unusually complex business logic thoroughly with tests and team bug bashes.",
               "Settings. Embedded Instagram's web settings into the native Oculus app, avoiding a costly native rebuild and ongoing maintenance. Restyled it to match the native app's look and feel, and made sure settings changes stayed in sync with the app.",
-              "Privacy features. Delivered a complex set of legally required privacy features under strict deadlines. Identified and coordinated stakeholders across Instagram, gathered requirements, and built the implementations with no margin for error.",
+              "Privacy Features. Delivered a complex set of legally required privacy features under strict deadlines. Identified and coordinated stakeholders across Instagram, gathered requirements, and built the implementations with no margin for error.",
             ]},
+          "UX Design. Drove UX design independently when designer bandwidth was limited, then partnered with the design team to iterate and implement final Figma specs pixel-perfect.",
           "Logging and observability. Instrumented most core app functionality so we could track usage, reliability, and performance on dashboards, with alerting. Scaled the effort across the team by writing best-practice docs, building helper APIs, tracking telemetry tasks for new features, and giving tech talks.",
-          "Tech lead for the core app surfaces team post-launch: managed roadmap, scoped feature work, collaborated with PM and design team, onboarded and mentored junior engineers.",
-          "Drove UX design independently when designer bandwidth was limited, then partnered with the design team to iterate and implement final Figma specs pixel-perfect."
+          "Leadership. Tech lead for the core app surfaces team post-launch: managed roadmap, scoped feature work, collaborated with PM and design team, onboarded and mentored junior engineers.",
         ],
       },
       {
