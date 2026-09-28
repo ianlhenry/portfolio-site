@@ -21,8 +21,18 @@ export function Sidebar(props: SidebarProps) {
         <nav className="sidebar-nav" aria-label="On this page">
           <ul className="sidebar-nav-list">
             {NAV_LINKS.map((navLink) => (
-              <li key={navLink.href}>
-                <a href={navLink.href} className="sidebar-nav-link">
+              <li key={navLink.label}>
+                <a
+                  href={navLink.href}
+                  className="sidebar-nav-link"
+                  {...(navLink.external
+                    ? {
+                        target: "_blank" as const,
+                        rel: "noopener noreferrer",
+                        "aria-label": "Projects (opens GitHub in a new tab)",
+                      }
+                    : {})}
+                >
                   {navLink.label}
                 </a>
               </li>

@@ -4,20 +4,14 @@ import { RoleEntryList } from "./RoleEntryList";
 export type ExperienceBlockProps = {
   experience: Employer[];
   leftColumnYearsOnly?: boolean;
-  leftColumnStartDateOnly?: boolean;
 };
 
 export function ExperienceBlock(props: ExperienceBlockProps) {
-  const {
-    experience,
-    leftColumnYearsOnly = true,
-    leftColumnStartDateOnly = false,
-  } = props;
+  const { experience, leftColumnYearsOnly = true } = props;
   return (
     <RoleEntryList
       entries={experience}
       leftColumnYearsOnly={leftColumnYearsOnly}
-      leftColumnStartDateOnly={leftColumnStartDateOnly}
     />
   );
 }

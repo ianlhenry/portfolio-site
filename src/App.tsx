@@ -7,7 +7,6 @@ import {
   education,
   experience,
   person,
-  projects,
   RESUME_PDF,
   volunteering,
 } from "./data/resumeData";
@@ -35,12 +34,6 @@ export default function App() {
             </Section>
             <Section id="volunteering" title="Volunteering">
               <ExperienceBlock experience={volunteering} />
-            </Section>
-            <Section id="projects" title="Projects">
-              <ExperienceBlock
-                experience={projects}
-                leftColumnStartDateOnly
-              />
             </Section>
             <Section id="education" title="Education">
               <EducationBlock education={education} />

@@ -57,6 +57,7 @@ export const experience = [
           "Early member of team building brand new Instagram app for Oculus VR headsets",
           "Owned most ambiguous and complex features, requiring full-stack expertise across front-end (JavaScript, React Native) and back-end GraphQL and REST APIs in Python",
           "Onboarded performance and reliability metrics, dashboards, and alerting",
+          "Drove UX design independently when designer bandwidth was limited, then partnered with the design team to iterate and implement final Figma specs pixel-perfect",
           "Tech lead for the core app surfaces team post-launch: managed roadmap, scoped feature work, collaborated with PM and design team, onboarded and mentored junior engineers",
         ],
       },
@@ -200,53 +201,6 @@ export const volunteering = [
         languages: ["Javascript", "React", "Python", "Plone/Zope", "Cursor AI IDE", "Claude Code"],
         jobResponsibilities: [
           "Implemented various website features and performance improvements requested by trip leaders and members using Javascript & Python in a Plone & Zope based tech stack",
-        ],
-      },
-    ],
-  },
-] satisfies Employer[];
-
-export const projects = [
-  {
-    company: "Trailbound",
-    companyUrl: "https://trailbound.ianhenry.ca/",
-    startDate: { month: 7, year: 2026 },
-    endDate: null,
-    roles: [
-      {
-        jobTitle: "",
-        teamName: "",
-        startDate: { month: 7, year: 2026 },
-        endDate: null,
-        languages: [
-          "Javascript",
-          "Next.js",
-          "Cursor AI IDE",
-        ],
-        jobResponsibilities: [
-          "Built a web application using agentic flows with Cursor AI IDE to find a backpacking route based on weather forecasts, trail conditions, and other factors",
-        ],
-      },
-    ],
-  },
-  {
-    company: "BetaCast",
-    companyUrl: "https://betacast.ianhenry.ca/",
-    startDate: { month: 5, year: 2026 },
-    endDate: null,
-    roles: [
-      {
-        jobTitle: "",
-        teamName: "",
-        startDate: { month: 5, year: 2026 },
-        endDate: null,
-        languages: [
-          "Javascript",
-          "React",
-          "Cursor AI IDE",
-        ],
-        jobResponsibilities: [
-          "Web application built using agentic flows with Cursor AI IDE to aggregate mountaineering trip-planning resources for a specific location into a single interface, including weather forecasting, snow depth, air quality, mapping tools, and more",
         ],
       },
     ],

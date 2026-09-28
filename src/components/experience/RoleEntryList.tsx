@@ -2,7 +2,6 @@ import type { Employer } from "../../types/resumeTypes";
 import {
   formatJobDateRange,
   formatJobDatesToYearsOnly,
-  formatJobStartDate,
 } from "../../utils/dateUtils";
 import { RoleTitle } from "./RoleTitle";
 import { TeamSectionBlock } from "./TeamSectionBlock";
@@ -10,15 +9,10 @@ import { TeamSectionBlock } from "./TeamSectionBlock";
 export type RoleEntryListProps = {
   entries: Employer[];
   leftColumnYearsOnly?: boolean;
-  leftColumnStartDateOnly?: boolean;
 };
 
 export function RoleEntryList(props: RoleEntryListProps) {
-  const {
-    entries,
-    leftColumnYearsOnly = false,
-    leftColumnStartDateOnly = false,
-  } = props;
+  const { entries, leftColumnYearsOnly = false } = props;
   return (
     <>
       {entries.map((employer) => {
@@ -35,24 +29,21 @@ export function RoleEntryList(props: RoleEntryListProps) {
             <div className="role-grid">
               <header
                 className="role-column-meta"
-                aria-label={
-                  leftColumnStartDateOnly
-                    ? formatJobStartDate(employer.startDate)
-                    : formatJobDateRange(employer.startDate, employer.endDate)
-                }
+                aria-label={formatJobDateRange(
+                  employer.startDate,
+                  employer.endDate,
+                )}
               >
                 <time className="role-dates-col">
-                  {leftColumnStartDateOnly
-                    ? formatJobStartDate(employer.startDate)
-                    : leftColumnYearsOnly
-                      ? formatJobDatesToYearsOnly(
-                          employer.startDate,
-                          employer.endDate,
-                        )
-                      : formatJobDateRange(
-                          employer.startDate,
-                          employer.endDate,
-                        )}
+                  {leftColumnYearsOnly
+                    ? formatJobDatesToYearsOnly(
+                        employer.startDate,
+                        employer.endDate,
+                      )
+                    : formatJobDateRange(
+                        employer.startDate,
+                        employer.endDate,
+                      )}
                 </time>
               </header>
               <div className="role-column-body">
