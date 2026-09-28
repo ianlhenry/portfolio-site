@@ -13,13 +13,13 @@ export const person = {
   githubUrl: "https://github.com/ianlhenry",
   linkedinUrl: "https://www.linkedin.com/in/ianlhenry",
   summary:
-    "Staff software engineer specializing in performance, reliability, and zero-to-one product launches.",
+    "Staff software engineer with 13 years of experience shipping consumer apps at Meta and Microsoft, from zero-to-one launches to products at scale.",
   highlights: [
     "Co-founded multiple greenfield initiatives at Meta, driving technical and organizational alignment from ideation to scale, reaching millions of users",
     "Diverse and deep experience across many platforms, languages and frameworks: JavaScript, React, C/C++, PHP/Hack, Python, C#, Objective-C",
     "Skilled at parachuting into new tech stacks and large legacy codebases, delivering impact quickly",
+    "Brings a measurement-first approach: defines metrics, builds dashboards, and uses data to guide product decisions",
     "Cultivates cohesive team culture rooted in technical craftsmanship, dedicating time to onboard, mentor and teach engineers across all seniority levels",
-    "Energized by data-driven performance and reliability optimization work",
   ],
 } satisfies Person;
 
