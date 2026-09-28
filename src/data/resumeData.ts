@@ -30,7 +30,8 @@ export const RESUME_PDF = {
 
 /**
  * Each employer has `roles`: each entry is a team stint with
- * `teamName`, `jobTitle`, `startDate` / `endDate`, `languages`, and `jobResponsibilities` (bullets).
+ * `teamName`, `jobTitle`, `startDate` / `endDate`, `languages`, and `jobResponsibilities`.
+ * A responsibility is a string, or `{ text, subBullets }` for one level of nested bullets.
  *
  * Employer-level `startDate` / `endDate`: `{ month: 1–12, year: number }`.
  * Set employer `endDate` to `null` for a current position; the UI shows "Present".
@@ -54,11 +55,17 @@ export const experience = [
           "Python",
         ],
         jobResponsibilities: [
-          "Early member of team building brand new Instagram app for Oculus VR headsets",
-          "Owned most ambiguous and complex features, requiring full-stack expertise across front-end (JavaScript, React Native) and back-end GraphQL and REST APIs in Python",
-          "Onboarded performance and reliability metrics, dashboards, and alerting",
-          "Drove UX design independently when designer bandwidth was limited, then partnered with the design team to iterate and implement final Figma specs pixel-perfect",
-          "Tech lead for the core app surfaces team post-launch: managed roadmap, scoped feature work, collaborated with PM and design team, onboarded and mentored junior engineers",
+          { 
+            text: "Early member of the team building a new Instagram app for Oculus VR, owning ambiguous and technically complex features end to end:", 
+            subBullets: [
+              "Content Reporting. Evaluated architecture options by studying how reporting worked on Instagram for web, iOS, and Android, then chose a novel approach that reused code across platforms, reducing development and maintenance costs while meeting all legal requirements.",
+              "Teen Accounts. Built quiet hours and daily time limits end to end, porting existing backend APIs to GraphQL for reuse and building the front end from scratch. Covered the unusually complex business logic thoroughly with tests and team bug bashes.",
+              "Settings. Embedded Instagram's web settings into the native Oculus app, avoiding a costly native rebuild and ongoing maintenance. Restyled it to match the native app's look and feel, and made sure settings changes stayed in sync with the app.",
+              "Privacy features. Delivered a complex set of legally required privacy features under strict deadlines. Identified and coordinated stakeholders across Instagram, gathered requirements, and built the implementations with no margin for error.",
+            ]},
+          "Logging and observability. Instrumented most core app functionality so we could track usage, reliability, and performance on dashboards, with alerting. Scaled the effort across the team by writing best-practice docs, building helper APIs, tracking telemetry tasks for new features, and giving tech talks.",
+          "Tech lead for the core app surfaces team post-launch: managed roadmap, scoped feature work, collaborated with PM and design team, onboarded and mentored junior engineers.",
+          "Drove UX design independently when designer bandwidth was limited, then partnered with the design team to iterate and implement final Figma specs pixel-perfect."
         ],
       },
       {

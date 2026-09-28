@@ -1,5 +1,16 @@
-import type { EmployerRole } from "../../types/resumeTypes";
+import type {
+  EmployerRole,
+  JobResponsibility,
+} from "../../types/resumeTypes";
 import { formatJobDateRange } from "../../utils/dateUtils";
+
+function responsibilityText(responsibility: JobResponsibility): string {
+  return typeof responsibility === "string" ? responsibility : responsibility.text;
+}
+
+function responsibilitySubBullets(responsibility: JobResponsibility): string[] {
+  return typeof responsibility === "string" ? [] : responsibility.subBullets;
+}
 
 export type TeamSectionBlockProps = {
   role: EmployerRole;
@@ -40,11 +51,27 @@ export function TeamSectionBlock(props: TeamSectionBlockProps) {
       ) : null}
       {role.jobResponsibilities?.length ? (
         <ul className="team-section-list">
-          {role.jobResponsibilities.map((responsibility) => (
-            <li key={responsibility} className="team-section-line">
-              {responsibility}
-            </li>
-          ))}
+          {role.jobResponsibilities.map((responsibility, index) => {
+            const text = responsibilityText(responsibility);
+            const subBullets = responsibilitySubBullets(responsibility);
+            return (
+              <li key={`${text}-${index}`} className="team-section-line">
+                {text}
+                {subBullets.length > 0 ? (
+                  <ul className="team-section-sublist">
+                    {subBullets.map((subBullet, subIndex) => (
+                      <li
+                        key={`${subBullet}-${subIndex}`}
+                        className="team-section-subline"
+                      >
+                        {subBullet}
+                      </li>
+                    ))}
+                  </ul>
+                ) : null}
+              </li>
+            );
+          })}
         </ul>
       ) : null}
       {role.languages?.length ? (

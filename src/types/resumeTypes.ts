@@ -4,13 +4,21 @@ export interface YearMonth {
   year: number;
 }
 
+/** One responsibility bullet, with an optional single level of sub-bullets. */
+export type JobResponsibility =
+  | string
+  | {
+      text: string;
+      subBullets: string[];
+    };
+
 export interface EmployerRole {
   jobTitle: string;
   teamName: string;
   startDate: YearMonth;
   endDate: YearMonth | null;
   languages: string[];
-  jobResponsibilities: string[];
+  jobResponsibilities: JobResponsibility[];
 }
 
 export interface Employer {
