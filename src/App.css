@@ -313,8 +313,8 @@ main:focus {
 
 .section-header {
   margin-bottom: var(--space-md);
-  padding-bottom: 0;
-  border-bottom: none;
+  padding-bottom: var(--space-xs);
+  border-bottom: 1px solid var(--rule);
 }
 
 .section-title {
@@ -329,7 +329,7 @@ main:focus {
 
 .highlights-intro {
   font-size: var(--fs-bullet);
-  font-weight: 400;
+  font-weight: 600;
   color: var(--text);
   margin: 0 0 var(--space-md);
   line-height: var(--lh-prose);
