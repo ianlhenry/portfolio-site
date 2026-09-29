@@ -4,3 +4,4 @@ dist-ssr
 .wrangler
 .DS_Store
 *.local
+*.tsbuildinfo

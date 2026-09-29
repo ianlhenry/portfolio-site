@@ -3,15 +3,13 @@ import type { ReactNode } from "react";
 export type SectionProps = {
   id: string;
   title: string;
-  beforeTitle?: ReactNode;
   children: ReactNode;
 };
 
 export function Section(props: SectionProps) {
-  const { id, title, beforeTitle, children } = props;
+  const { id, title, children } = props;
   return (
     <section className="section" id={id} aria-labelledby={`${id}-heading`}>
-      {beforeTitle}
       <div className="section-header">
         <h2 className="section-title" id={`${id}-heading`}>
           {title}
