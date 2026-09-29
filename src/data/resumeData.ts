@@ -58,14 +58,14 @@ export const experience = [
           { 
             text: "Early member of the team building a new Instagram app for Oculus VR, owning ambiguous and technically complex features end to end:", 
             subBullets: [
-              "Teen Accounts: built quiet hours and daily time limits, porting existing backend APIs to GraphQL for reuse and building the front end from scratch. Covered the unusually complex business logic thoroughly with tests and team bug bashes.",
-              "Content Reporting: evaluated architecture options by studying how reporting worked on Instagram for web, iOS, and Android, then chose a novel approach that reused code across platforms, reducing development and maintenance costs while meeting all legal requirements.",
+              "Teen accounts: built quiet hours and daily time limits, porting existing backend APIs to GraphQL for reuse and building the front end from scratch. Covered the unusually complex business logic thoroughly with tests and team bug bashes.",
+              "Content reporting: evaluated architecture options by studying how reporting worked on Instagram for web, iOS, and Android, then chose a novel approach that reused code across platforms, reducing development and maintenance costs while meeting all legal requirements.",
               "Settings: embedded Instagram's web settings into the native Oculus app, avoiding a costly native rebuild and ongoing maintenance. Restyled it to match the native app's look and feel, and made sure settings changes stayed in sync with the app.",
-              "Privacy Features: delivered a complex set of legally required privacy features under strict deadlines. Identified and coordinated stakeholders across Instagram, gathered requirements, and built the implementations with no margin for error.",
+              "Privacy features: delivered a complex set of legally required privacy features under strict deadlines. Identified and coordinated stakeholders across Instagram, gathered requirements, and built the implementations with no margin for error.",
             ]},
-          "UX Design: took on design independently when designer bandwidth was limited, then partnered with the design team to iterate and implement final Figma specs pixel-perfect.",
-          "Logging and Observability: instrumented most core app functionality so we could track usage, reliability, and performance on dashboards, with alerting. Scaled the effort across the team by writing best-practice docs, building helper APIs, tracking telemetry tasks for new features, and giving tech talks.",
-          "Leadership: tech lead for the core app surfaces team post-launch: managed roadmap, scoped feature work, collaborated with PM and design team, onboarded and mentored junior engineers.",
+          "UX design: took on design independently when designer bandwidth was limited, then partnered with the design team to iterate and implement final Figma specs pixel-perfect.",
+          "Logging and observability: instrumented most core app functionality so we could track usage, reliability, and performance on dashboards, with alerting. Scaled the effort across the team by writing best-practice docs, building helper APIs, tracking telemetry tasks for new features, and giving tech talks.",
+          "Leadership: led the core app surfaces team after launch, managing the roadmap, scoping work, partnering with PM and design, and mentoring junior engineers.",
         ],
       },
       {
@@ -73,11 +73,17 @@ export const experience = [
         teamName: "Messenger for iOS & Android",
         startDate: { month: 2, year: 2024 },
         endDate: { month: 5, year: 2024 },
-        languages: ["Java", "C++", "PHP"],
+        languages: ["Java", "C++", "PHP", "Kotlin"],
         jobResponsibilities: [
-          "Tech lead for short-term high-priority cross-org initiative tasked with improving media quality for the Messenger mobile apps",
-          "Reverse engineered huge Java, C++ and PHP codebases for Messenger mobile and authored doc summarizing problem domain, technical/architectural overview, workstreams",
-          "Built system to quantify quality of media sent and received via MS-SSIM, and built out roadmap of features to improve quality",
+          {
+            text: "Tech lead: led a short-term, high-priority, cross-org initiative to improve media quality in Messenger's mobile apps, joining with no prior knowledge of the Android codebase.",
+            subBullets: [
+              "Ramp-up: quickly learned the Android app's architecture and diagrammed every component affecting media quality across the full stack, from Java/Kotlin UI code through the C/C++ native layer to server-side PHP/Hack.", 
+              "Alignment: met with stakeholders across the Messenger org, including PM, data science, program management, and several performance, rendering, and media platform teams, to understand their view of the problem.",
+              "Strategy: wrote a state-of-media-quality document for the cross-org working group. It mapped user research findings to existing metrics to expose gaps, explained how image sending and rendering worked, identified the levers for improving quality, and divided the work into owned workstreams with roadmaps.",
+              "Measurement: began building image quality metrics, adding MS-SSIM scoring on the sender side and laying the groundwork for receiver-side scoring. The initiative was wound down in a reorg before launch."
+            ]
+          },
         ],
       },
       {
@@ -85,14 +91,41 @@ export const experience = [
         teamName: "Messenger for Desktop, Foundations",
         startDate: { month: 1, year: 2022 },
         endDate: { month: 2, year: 2024 },
-        languages: ["JavaScript", "C++", "C"],
+        languages: ["JavaScript", "C++", "C", "React Native"],
         jobResponsibilities: [
-          "Engineer focused on product performance and reliability; solved hardest technical problems requiring deep expertise in JavaScript and C/C++ codebases",
-          "Data, metrics and observability champion: ensured performance and reliability of all features could be quantified and visualized on dashboards",
-          "Crash reliability expert: consistently solved obscure crashes and improved reliability of crash reporting infrastructure in JavaScript and C++",
-          "Performance expert: significantly improved speed of core app functionality (app launch, message sending, chat thread loading), leveraging framework and OS tooling",
-          "Release process owner: ensured new product releases maintained a high quality bar",
-          "Onboarded, mentored and taught junior and senior engineers across the org",
+          {
+            text: "Crash reliability: set the direction, then cut crashes by more than two-thirds, first through my own work and then by leading a team.",
+            subBullets: [
+              "Made the case for prioritizing crash reliability: wrote posts on why it mattered, what we should aim for, and how to get there. Set goals and shared regular status updates and results with the org.",
+              "Consistently solved the hardest crashes in JavaScript and C++, cutting the share of users experiencing crashes from 2% to 1% in six months. Improved the crash reporting infrastructure itself (reliability, symbolication success rate, and stack trace quality) and added richer crash metadata to make crashes faster to diagnose.",
+              "Led a workstream of 4 engineers that further improved tooling and fixed crashes, bringing that share down to 0.6% on Windows and 0.4% on macOS.",
+            ]
+          },
+          "Incident response: trusted go-to engineer for the most complex production incidents, resolving dozens of high-severity issues across JavaScript and C++, often under time pressure.",
+          {
+            text: "Performance: set the direction, measuring and improving the speed of the most critical user flows.",
+            subBullets: [
+              "Defined the performance strategy: wrote posts on why performance mattered, which flows to prioritize, and how to improve them. Built accurate telemetry for every core scenario, analyzed the data to set goals, and shared regular status updates and results.",
+              "Drove many performance improvements across key flows, including cold start, message sending, and chat thread loading. The most impactful change cut cold-start latency by 20% and increased daily active users by 1.2%. Added better tracing to make performance problems easier to diagnose.",
+              "Performance tech lead for the end-to-end encrypted messaging launch: identified the biggest gaps and opportunities, fixed many issues directly, and mentored product engineers across teams to fix others, including an in-person tech talk for the team in London.",
+            ]
+          },
+          {
+            text: "Release process: led the release process for Messenger Desktop, keeping quality high across every release.",
+            subBullets: [
+              "Defined and documented the release process, including cadence, staged rollout (alpha, beta, production), on-call responsibilities, and metric regression thresholds.",
+              "Caught and fixed metric regressions during beta before they reached production, sharing knowledge with on-call along the way.",
+              "Ran release review meetings, then deliberately handed them off to on-call engineers so the whole team learned how releases work.",
+            ]
+          },
+          {
+            text: "Mentorship and knowledge sharing: onboarded, mentored, and taught engineers at all levels across the org.",
+            subBullets: [
+              "Held regular one-on-one mentoring sessions with engineers on my team and beyond.",
+              "Regularly wrote detailed posts explaining how I solved difficult problems, so others could apply the same approaches.",
+              "Gave dozens of tech talks on crashes, performance, release processes, and other areas.",
+            ]
+          }
         ],
       },
       {
