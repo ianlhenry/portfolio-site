@@ -8,6 +8,7 @@ import type {
 export const person = {
   name: "Ian Henry",
   title: "Staff Software Engineer",
+  photoUrl: "/ian-henry-headshot.jpg",
   location: "Seattle, WA",
   email: "ian@ianhenry.ca",
   githubUrl: "https://github.com/ianlhenry",

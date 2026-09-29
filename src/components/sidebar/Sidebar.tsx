@@ -13,6 +13,15 @@ export function Sidebar(props: SidebarProps) {
     <aside className="sidebar" aria-label="Introduction">
       <div className="sidebar-inner">
         <div className="sidebar-intro">
+          {person.photoUrl ? (
+            <img
+              className="sidebar-photo"
+              src={person.photoUrl}
+              alt={person.name}
+              width={112}
+              height={112}
+            />
+          ) : null}
           <h1 className="sidebar-name" id="site-title">
             {person.name}
           </h1>

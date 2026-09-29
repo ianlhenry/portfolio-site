@@ -32,6 +32,8 @@ export interface Employer {
 export interface Person {
   name: string;
   title: string;
+  /** Headshot shown as a circle above the name; path under `public/`. Omit to hide. */
+  photoUrl?: string;
   location: string;
   email: string;
   githubUrl: string;

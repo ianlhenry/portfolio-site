@@ -119,7 +119,19 @@
 .sidebar-intro {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: var(--space-md);
+  text-align: center;
+}
+
+.sidebar-photo {
+  display: block;
+  width: 112px;
+  height: 112px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid var(--rule);
+  background: var(--bg-tile);
 }
 
 .sidebar-nav {
