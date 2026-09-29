@@ -17,7 +17,7 @@
   --tag-fallback-border: rgba(155, 181, 168, 0.28);
   --font-body: "Inter", "Source Sans 3", system-ui, sans-serif;
   --font-display: "Inter", "Source Sans 3", system-ui, sans-serif;
-  --sidebar-width: min(270px, 30vw);
+  --sidebar-width: min(240px, 27vw);
   --max-content: 55rem;
   --space-xs: 0.35rem;
   --space-sm: 0.65rem;
@@ -537,6 +537,10 @@ main:focus {
   padding: 0;
   border: none;
   color: var(--text-heading);
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
 }
 
 .team-section-name {
@@ -550,7 +554,14 @@ main:focus {
   color: var(--text-muted);
 }
 
+.team-section-title {
+  min-width: 0;
+}
+
 .team-section-dates {
+  flex: 0 0 auto;
+  text-align: right;
+  white-space: nowrap;
   font-size: var(--fs-meta);
   font-weight: 400;
   color: var(--text-muted);

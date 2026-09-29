@@ -28,25 +28,24 @@ export function TeamSectionBlock(props: TeamSectionBlockProps) {
     <section className="team-section-block" aria-label={ariaLabel}>
       {showHeading ? (
       <h4 className="team-section-heading">
-        {role.teamName ? (
-          <span className="team-section-name">{role.teamName}</span>
-        ) : null}
-        {role.jobTitle ? (
-          <>
-            {role.teamName ? (
-              <span className="team-section-sep" aria-hidden>
-                {" "}
-                ·{" "}
-              </span>
-            ) : null}
-            <span className="team-section-job">{role.jobTitle}</span>
-          </>
-        ) : null}
+        <span className="team-section-title">
+          {role.teamName ? (
+            <span className="team-section-name">{role.teamName}</span>
+          ) : null}
+          {role.jobTitle ? (
+            <>
+              {role.teamName ? (
+                <span className="team-section-sep" aria-hidden>
+                  {" "}
+                  ·{" "}
+                </span>
+              ) : null}
+              <span className="team-section-job">{role.jobTitle}</span>
+            </>
+          ) : null}
+        </span>
         {dateLabel ? (
-          <span className="team-section-dates">
-            {" "}
-            · {dateLabel}
-          </span>
+          <span className="team-section-dates">{dateLabel}</span>
         ) : null}
       </h4>
       ) : null}
