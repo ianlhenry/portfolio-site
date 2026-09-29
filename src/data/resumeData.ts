@@ -159,11 +159,14 @@ export const experience = [
         endDate: { month: 7, year: 2020 },
         languages: ["JavaScript", "React", "Electron", "PHP"],
         jobResponsibilities: [
-          "Built multiple prototype products on desktop using JavaScript/React and PHP",
-          "Shipped the first version of Messenger for Desktop, built using Electron and JavaScript/React",
-          "Expertise in authentication (single sign on), Windows push notifications",
-          "Tech lead for launch, for build/release infrastructure, and release process",
-          "Reliability expert, reduced crash rate post-launch by 3x",
+          "Prototyping: built multiple prototype desktop products using JavaScript/React and PHP.",
+          {
+            text: "Launch: shipped the first version of Messenger for Desktop, built with Electron and React, and led the release effort for the launch.",
+            subBullets: [
+              "Built key platform features, including single sign-on authentication and Windows push notifications.",
+            ]
+          },
+          "Build and release: owned the build and release infrastructure and defined the release process.",
         ],
       },
     ],
