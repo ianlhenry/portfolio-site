@@ -3,6 +3,7 @@ import type {
   JobResponsibility,
 } from "../../types/resumeTypes";
 import { formatJobDateRange } from "../../utils/dateUtils";
+import { InlineText } from "../InlineText";
 
 function responsibilityText(responsibility: JobResponsibility): string {
   return typeof responsibility === "string" ? responsibility : responsibility.text;
@@ -56,7 +57,7 @@ export function TeamSectionBlock(props: TeamSectionBlockProps) {
             const subBullets = responsibilitySubBullets(responsibility);
             return (
               <li key={`${text}-${index}`} className="team-section-line">
-                {text}
+                <InlineText text={text} />
                 {subBullets.length > 0 ? (
                   <ul className="team-section-sublist">
                     {subBullets.map((subBullet, subIndex) => (
@@ -64,7 +65,7 @@ export function TeamSectionBlock(props: TeamSectionBlockProps) {
                         key={`${subBullet}-${subIndex}`}
                         className="team-section-subline"
                       >
-                        {subBullet}
+                        <InlineText text={subBullet} />
                       </li>
                     ))}
                   </ul>

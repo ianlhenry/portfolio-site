@@ -10,11 +10,14 @@ export function EducationBlock(props: EducationBlockProps) {
     <>
       {education.map((educationEntry) => (
         <div key={educationEntry.degree} className="education-item">
-          <h3>{educationEntry.degree}</h3>
-          <p className="institution">{educationEntry.school}</p>
-          <p className="location">{educationEntry.location}</p>
-          <p className="detail">
-            {educationEntry.startYear}–{educationEntry.endYear}
+          <div className="education-heading">
+            <h3>{educationEntry.degree}</h3>
+            <span className="role-dates">
+              {educationEntry.startYear} — {educationEntry.endYear}
+            </span>
+          </div>
+          <p className="institution">
+            {educationEntry.school} · {educationEntry.location}
           </p>
         </div>
       ))}

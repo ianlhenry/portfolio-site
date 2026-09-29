@@ -21,8 +21,13 @@ export default function App() {
         <Sidebar person={person} resumePdf={RESUME_PDF} />
         <div className="main-column">
           <main id="main" tabIndex={-1}>
-            <Section id="highlights" title="Highlights">
-              <p className="highlights-intro">{person.summary}</p>
+            <Section
+              id="highlights"
+              title="Highlights"
+              beforeTitle={
+                <p className="highlights-intro">{person.summary}</p>
+              }
+            >
               <ul className="highlights-list">
                 {person.highlights.map((highlight) => (
                   <li key={highlight}>{highlight}</li>

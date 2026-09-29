@@ -15,11 +15,12 @@ export const person = {
   summary:
     "Staff software engineer with 13 years of experience shipping consumer apps at Meta and Microsoft, from zero-to-one launches to products at scale.",
   highlights: [
-    "Co-founded multiple greenfield initiatives at Meta, driving technical and organizational alignment from ideation to scale, reaching millions of users",
-    "Diverse and deep experience across many platforms, languages and frameworks: JavaScript, React, C/C++, PHP/Hack, Python, C#, Objective-C",
-    "Skilled at parachuting into new tech stacks and large legacy codebases, delivering impact quickly",
-    "Brings a measurement-first approach: defines metrics, builds dashboards, and uses data to guide product decisions",
-    "Energized by cross-team collaboration, cultivating cohesive team culture rooted in technical craftsmanship, dedicating time to onboard, mentor and teach engineers across all seniority levels",
+    "Co-founded multiple greenfield initiatives at Meta, driving technical and organizational alignment from ideation to scale, reaching millions of users.",
+    "Diverse and deep experience across many platforms, languages and frameworks: JavaScript, React, C/C++, PHP/Hack, Python, C#, Objective-C.",
+    "Product-minded engineer who cares about UX: designs independently when needed, partners closely with designers, and turns Figma designs into polished, pixel-perfect UI.",
+    "Skilled at parachuting into new tech stacks and large legacy codebases, delivering impact quickly.",
+    "Brings a measurement-first approach: defines metrics, builds dashboards, and uses data to guide product decisions.",
+    "Energized by cross-team collaboration, cultivating cohesive team culture rooted in technical craftsmanship, dedicating time to onboard, mentor and teach engineers across all seniority levels.",
   ],
 } satisfies Person;
 
@@ -32,6 +33,7 @@ export const RESUME_PDF = {
  * Each employer has `roles`: each entry is a team stint with
  * `teamName`, `jobTitle`, `startDate` / `endDate`, `languages`, and `jobResponsibilities`.
  * A responsibility is a string, or `{ text, subBullets }` for one level of nested bullets.
+ * Responsibility and sub-bullet text can include Markdown-style links: `[label](https://…)`.
  *
  * Employer-level `startDate` / `endDate`: `{ month: 1–12, year: number }`.
  * Set employer `endDate` to `null` for a current position; the UI shows "Present".
@@ -88,7 +90,7 @@ export const experience = [
         ],
       },
       {
-        jobTitle: "Senior -> Staff Software Engineer",
+        jobTitle: "Senior → Staff Software Engineer",
         teamName: "Messenger for Desktop, Foundations",
         startDate: { month: 1, year: 2022 },
         endDate: { month: 2, year: 2024 },
@@ -158,10 +160,10 @@ export const experience = [
         ],
       },
       {
-        jobTitle: "Software Engineer II -> Senior Software Engineer",
+        jobTitle: "Software Engineer II → Senior Software Engineer",
         teamName: "Messenger for Desktop V1",
         startDate: { month: 8, year: 2018 },
-        endDate: { month: 6  , year: 2020 },
+        endDate: { month: 7  , year: 2020 },
         languages: ["JavaScript", "React", "Electron", "PHP"],
         jobResponsibilities: [
           "Early team member: joined the small team building Messenger's first desktop app from scratch in Electron and React, starting with its predecessor, Messenger Video.",
@@ -201,7 +203,7 @@ export const experience = [
         languages: ["C#", "ASP.NET"],
         jobResponsibilities: [
           "Built, maintained, and monitored scalable web services for the Microsoft Universal Store using C# and ASP.NET WebAPI.",
-          "On-call engineer responsible for keeping various high-volume services running 24/7; investigated, debugged and quickly resolved issues in order to maintain 99.9% reliability SLA on high-volume services.",
+          "On-call engineer responsible for keeping various high-volume services running 24/7; resolved production issues quickly to maintain 99.9% reliability SLA on high-volume services.",
         ],
       },
       {
@@ -255,8 +257,8 @@ export const experience = [
 
 export const volunteering = [
   {
-    company: "Mountaineers",
-    companyUrl: "https://www.mountaineers.org/blog/technology-changelog",
+    company: "The Mountaineers",
+    companyUrl: "https://www.mountaineers.org",
     startDate: { month: 11, year: 2025 },
     endDate: null,
     roles: [
@@ -265,9 +267,9 @@ export const volunteering = [
         teamName: "",
         startDate: { month: 11, year: 2025 },
         endDate: null,
-        languages: ["Javascript", "React", "Python", "Plone/Zope", "Cursor AI IDE", "Claude Code"],
+        languages: ["JavaScript", "React", "Python", "Plone/Zope", "Cursor AI", "Claude Code"],
         jobResponsibilities: [
-          "Implemented various website features and performance improvements requested by trip leaders and members using Javascript & Python in a Plone & Zope based tech stack.",
+          "Implemented various website features and performance improvements requested by trip leaders and members using JavaScript & Python in a Plone & Zope based tech stack; see the [Mountaineers Technology Changelog](https://www.mountaineers.org/blog/technology-changelog) for details.",
         ],
       },
     ],
