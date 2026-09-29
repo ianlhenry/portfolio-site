@@ -18,8 +18,8 @@ export function Sidebar(props: SidebarProps) {
               className="sidebar-photo"
               src={person.photoUrl}
               alt={person.name}
-              width={112}
-              height={112}
+              width={136}
+              height={136}
             />
           ) : null}
           <h1 className="sidebar-name" id="site-title">

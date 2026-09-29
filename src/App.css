@@ -126,8 +126,8 @@
 
 .sidebar-photo {
   display: block;
-  width: 112px;
-  height: 112px;
+  width: 136px;
+  height: 136px;
   border-radius: 50%;
   object-fit: cover;
   border: 1px solid var(--rule);
