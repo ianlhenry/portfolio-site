@@ -140,13 +140,16 @@ export const experience = [
           "PHP",
         ],
         jobResponsibilities: [
-          "Product engineer, fully rebuilding Messenger Desktop using React Native (for improved performance and reliability)",
-          "Go-to engineer for the hardest technical problems across the full tech stack, C/C++ and JavaScript",
-          "Wrote a codegen engine in JavaScript that generates 30k+ lines of C++",
-          "Data and telemetry infrastructure in JavaScript, C++, PHP/Hack",
-          "Build/release/continuous integration tooling/automation in PHP/Hack, JavaScript",
-          "Data and metrics expert, partnering with data science to ensure that the performance and reliability of all features can be quantified and visualized on dashboards",
-          "Tech lead for launch, managed team of 10+ engineers across multiple teams tasked with ensuring engagement metric match v1: tracked work, ran daily meetings, communicated progress",
+          "Rebuild: product engineer on the full rebuild of Messenger Desktop in React Native, aimed at improving performance and reliability.",
+          {
+            text: "Hardest problems: go-to engineer for the most difficult technical problems across the stack, in both JavaScript and C/C++.",
+            subBullets: [
+              "Wrote a code generation engine in JavaScript that produced more than 30,000 lines of C++ bindings for the app's JavaScript-to-C++ calls, eliminating hand-written boilerplate.",
+              "Built data and telemetry infrastructure across JavaScript, C++, and PHP/Hack, and partnered with data science to make sure app telemetry was accurate.",
+              "Built build, release, and continuous integration tooling and automation in PHP/Hack and JavaScript.",
+            ]
+          },
+          "Launch tech lead: led the parity workstream of 10+ engineers across multiple teams, bringing the rebuilt app's engagement metrics to near-parity with the original. Tracked work, ran daily standups, and communicated progress through a successful launch.",  
         ],
       },
       {
