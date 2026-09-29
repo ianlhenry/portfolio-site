@@ -46,6 +46,10 @@ The dev server (`npm run dev`) still renders in the browser with React via [`src
 
 Because nothing runs in the browser, React state, effects, and event handlers (`useState`, `useEffect`, `onClick`, and so on) have no effect in production even though they work in dev. Keep interactivity to plain HTML and CSS, or add a small standalone script. To bring React back in the browser, switch `entry-server.tsx` back to `renderToString`, have `main.tsx` call `hydrateRoot`, and stop stripping the script in `prerender.js`.
 
+## Deploying
+
+The site deploys to Cloudflare Workers (Worker name `ilh-cv`) as static assets, using [`wrangler.jsonc`](wrangler.jsonc). `wrangler deploy` runs `npm run build` and then uploads `dist/`. Keep that file in the repo. Without it, Wrangler's auto-setup adds `@cloudflare/vite-plugin` to the Vite config, which changes the build output layout and breaks prerendering.
+
 The Vite config uses `base: "./"` so asset paths work when the site is opened from the filesystem or deployed under a subpath.
 
 ## License

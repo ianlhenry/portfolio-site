@@ -1,0 +1,13 @@
+// Cloudflare Workers deploy config: serves the prerendered static site in dist/.
+// Keeping this file stops Wrangler's auto-setup from injecting @cloudflare/vite-plugin,
+// which changes Vite's output layout and breaks the prerender step in `npm run build`.
+{
+  "name": "ilh-cv",
+  "compatibility_date": "2026-09-01",
+  "build": {
+    "command": "npm run build"
+  },
+  "assets": {
+    "directory": "./dist"
+  }
+}
