@@ -88,7 +88,7 @@ export const experience = [
         ],
       },
       {
-        jobTitle: "Staff Software Engineer",
+        jobTitle: "Senior -> Staff Software Engineer",
         teamName: "Messenger for Desktop, Foundations",
         startDate: { month: 1, year: 2022 },
         endDate: { month: 2, year: 2024 },
@@ -131,7 +131,7 @@ export const experience = [
       },
       {
         jobTitle: "Senior Software Engineer",
-        teamName: "Messenger for Desktop V2, Product",
+        teamName: "Messenger for Desktop V2",
         startDate: { month: 7, year: 2020 },
         endDate: { month: 1, year: 2022 },
         languages: [
@@ -141,33 +141,48 @@ export const experience = [
           "PHP",
         ],
         jobResponsibilities: [
-          "Rebuild: product engineer on the full rebuild of Messenger Desktop in React Native, aimed at improving performance and reliability.",
+          "Rebuild: part of the team that rebuilt Messenger Desktop from scratch in React Native to improve performance and reliability.",
           {
-            text: "Hardest problems: go-to engineer for the most difficult technical problems across the stack, in both JavaScript and C/C++.",
+            text: "Launch parity lead: led a cross-functional team of 10+ engineers and data scientists that investigated and fixed engagement regressions in the rebuilt app, taking it to a 100% rollout.",  
             subBullets: [
-              "Wrote a code generation engine in JavaScript that produced more than 30,000 lines of C++ bindings for the app's JavaScript-to-C++ calls, eliminating hand-written boilerplate.",
-              "Built data and telemetry infrastructure across JavaScript, C++, and PHP/Hack, and partnered with data science to make sure app telemetry was accurate.",
-              "Built build, release, and continuous integration tooling and automation in PHP/Hack and JavaScript.",
+              "Ran daily war-room meetings, tracked every investigation, assigned owners and next steps, and posted regular updates to keep the team and leadership informed.",
+              "Drove the most complex investigations myself through data analysis, hypothesis generation, and experiments. Found the root cause of a major daily-active-user regression: missing telemetry from an unreliable new telemetry stack.",
+              "Investigated a message-sending regression on Windows by analyzing churn, user behavior, locales, and message types, added new telemetry, and designed and ran an experiment to test whether missing spell check was reducing sends.",
+              "Found that open-at-login wasn't enabled by default on macOS and wasn't supported at all for Windows Store users, a cause of engagement regressions. Fixed both, which helped close the gap.",
             ]
           },
-          "Launch tech lead: led the parity workstream of 10+ engineers across multiple teams, bringing the rebuilt app's engagement metrics to near-parity with the original. Tracked work, ran daily standups, and communicated progress through a successful launch.",  
+          "Code generation: built an engine that produced 171 APIs across 457 files, about 30,000 lines of JavaScript-to-C++ bindings, eliminating hand-written boilerplate.",
+          "Cross-stack features: one of the few engineers working across both JavaScript and C/C++, building some of the most complex features, such as rich deep linking from Messenger on the web (via a local HTTP server) and local and push notifications.",
+          "Telemetry and data: owned the app's data and telemetry, partnering with data science to keep metrics accurate and adding instrumentation to support the launch.",
+          "Build and release: developed build, release, and update infrastructure, ran release review meetings, fixed crashes, and mentored another engineer through leading the rollout.", 
         ],
       },
       {
-        jobTitle: "Software Engineer II",
-        teamName: "Messenger for Desktop, Product",
+        jobTitle: "Software Engineer II -> Senior Software Engineer",
+        teamName: "Messenger for Desktop V1",
         startDate: { month: 8, year: 2018 },
-        endDate: { month: 7, year: 2020 },
+        endDate: { month: 6  , year: 2020 },
         languages: ["JavaScript", "React", "Electron", "PHP"],
         jobResponsibilities: [
-          "Prototyping: built multiple prototype desktop products using JavaScript/React and PHP.",
+          "Early team member: joined the small team building Messenger's first desktop app from scratch in Electron and React, starting with its predecessor, Messenger Video.",
           {
-            text: "Launch: shipped the first version of Messenger for Desktop, built with Electron and React, and led the release effort for the launch.",
+            text: "Feature work: built and owned key parts of the app, including:",
             subBullets: [
-              "Built key platform features, including single sign-on authentication and Windows push notifications.",
+              "Authentication: built a secure single sign-on framework with security engineering, used by 72% of users who logged in.",
+              "Push notifications: built Windows push notifications for calls, spanning the desktop client, push infrastructure, and Microsoft's platform.",
+              "Workplace Chat: created the Workplace Chat version of the app, which led that team to adopt Messenger Desktop as their platform.",
             ]
           },
-          "Build and release: owned the build and release infrastructure and defined the release process.",
+          "Launch and migration: planned and led the migration of legacy Windows Store Messenger users to the new app, growing daily active users from 1k to 600k and monthly to over 3M. Kept users logged in by reverse-engineering the legacy app's token storage and building secure token exchange with security teams.",
+          {
+            text: "Scaling after launch:",
+            subBullets: [
+              "Release process: owned the release process as ship captain, fully automating Windows and Mac app store submissions.",
+              "Auto-update: led 4 engineers to overhaul auto-update, getting 85%+ of users onto current versions.",
+              "Reliability: led 6 engineers investigating a crash regression, cutting the share of Windows users experiencing crashes from 5.6% to about 2%.",
+            ]
+          },
+          "Team: mentored an intern from project scoping through a return offer, onboarded new teammates, and ran a biweekly tech talk series.",
         ],
       },
     ],
