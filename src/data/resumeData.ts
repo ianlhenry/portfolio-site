@@ -19,7 +19,7 @@ export const person = {
     "Diverse and deep experience across many platforms, languages and frameworks: JavaScript, React, C/C++, PHP/Hack, Python, C#, Objective-C",
     "Skilled at parachuting into new tech stacks and large legacy codebases, delivering impact quickly",
     "Brings a measurement-first approach: defines metrics, builds dashboards, and uses data to guide product decisions",
-    "Cultivates cohesive team culture rooted in technical craftsmanship, dedicating time to onboard, mentor and teach engineers across all seniority levels",
+    "Energized by cross-team collaboration, cultivating cohesive team culture rooted in technical craftsmanship, dedicating time to onboard, mentor and teach engineers across all seniority levels",
   ],
 } satisfies Person;
 
@@ -53,6 +53,7 @@ export const experience = [
           "React Native",
           "GraphQL",
           "Python",
+          "Figma"
         ],
         jobResponsibilities: [
           { 
@@ -195,8 +196,14 @@ export const experience = [
         endDate: { month: 8, year: 2017 },
         languages: ["C#", "XAML", "C++/CX", "C++", "Objective-C"],
         jobResponsibilities: [
-          "Worked across the full stack to implement features in the Groove Music App (C#, C++/CX, XAML) and the Office for iOS/Mac (Objective-C)",
-          "Tech lead for brand new Universal Windows Podcast app; wrote the design doc, onboarded and mentored new engineers, built core parts of the app using XAML and C# including background audio support, subscription management, collection page, and more",
+          {
+            text: "Mobile and desktop developer across a variety of first-party apps:",
+            subBullets: [
+              "Podcast App: tech lead for brand new app; wrote the design doc, onboarded and mentored new engineers, built core parts of the app using XAML and C# including background audio support, subscription management, collection page, and more.",
+              "Groove Music App: implemented features using C#, C++/CX and XAML.",
+              "Office for iOS/Mac: built new features using Objective-C."
+            ],
+          },
         ],
       },
       {
@@ -206,8 +213,8 @@ export const experience = [
         endDate: { month: 6, year: 2015 },
         languages: ["C++", "C#"],
         jobResponsibilities: [
-          "Windows Phone mobile engineer, worked in C++ and C# across the Windows Phone OS codebase; implemented new features in Kid's Corner, Action Center, Settings, Notifications, Alarms, Podcast app, and others",
-          "Designed and implemented a major enterprise email security feature that required changes to core Windows Phone OS components across the entire stack, including the e-mail app, the email sync service, the database layer, and the email notification service",
+          "Windows Phone mobile engineer, worked in C++ and C# across the Windows Phone OS codebase; implemented new features in Kid's Corner, Action Center, Settings, Notifications, Alarms, Podcast app, and others.",
+          "Designed and built a major enterprise email security feature, changing core Windows Phone OS components across the stack: the email app, sync service, database layer, and notification service.",
         ],
       },
       {
@@ -224,8 +231,7 @@ export const experience = [
           "C#",
         ],
         jobResponsibilities: [
-          "Built a web application to manage build and test runs for the Windows Phone OS codebase using ASP.NET MVC, ASP.NET WebAPI, JavaScript, jQuery and CSS",
-          "Implemented new features and fixed bugs in existing tools and services in C#",
+          "Front-end web developer, building applications to manage build and test runs for the Windows Phone OS codebase using ASP.NET MVC, ASP.NET WebAPI, JavaScript, jQuery and CSS.",
         ],
       },
     ],
@@ -246,7 +252,7 @@ export const volunteering = [
         endDate: null,
         languages: ["Javascript", "React", "Python", "Plone/Zope", "Cursor AI IDE", "Claude Code"],
         jobResponsibilities: [
-          "Implemented various website features and performance improvements requested by trip leaders and members using Javascript & Python in a Plone & Zope based tech stack",
+          "Implemented various website features and performance improvements requested by trip leaders and members using Javascript & Python in a Plone & Zope based tech stack.",
         ],
       },
     ],
