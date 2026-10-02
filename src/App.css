@@ -213,6 +213,13 @@
     margin-top: 0;
   }
 
+  /* Prod HTML has no script, so closed <details> stay closed. Reveal them on desktop. */
+  .section-details::details-content {
+    content-visibility: visible !important;
+    height: auto !important;
+    display: block !important;
+  }
+
   .section-details > .section-body {
     display: block !important;
   }
@@ -926,6 +933,12 @@ main:focus {
 
   .sidebar-nav {
     display: none;
+  }
+
+  .section-details::details-content {
+    content-visibility: visible !important;
+    height: auto !important;
+    display: block !important;
   }
 
   .section-details > .section-body {
