@@ -26,6 +26,7 @@ export function Sidebar(props: SidebarProps) {
             {person.name}
           </h1>
           <p className="sidebar-tagline">{person.title}</p>
+          <p className="sidebar-contact-line">{person.location}</p>
         </div>
         <nav className="sidebar-nav" aria-label="On this page">
           <ul className="sidebar-nav-list">

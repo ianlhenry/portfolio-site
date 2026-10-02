@@ -62,7 +62,6 @@ export function SidebarContact(props: SidebarContactProps) {
           </a>
         </li>
       </ul>
-      <span className="sidebar-contact-line">{person.location}</span>
     </div>
   );
 }
